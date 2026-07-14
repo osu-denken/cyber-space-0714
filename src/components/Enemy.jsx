@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGameStore } from '../core/useGameStore';
+import { useGame } from '../core/useGameStore';
 
 const Enemy = () => {
   const enemies = useGameStore(state => state.enemies);
