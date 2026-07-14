@@ -1,13 +1,45 @@
-// filepath: src/core/useGameStore.js
-import { create } from 'zustand';
+canva// filepath: src/core/useGameStore.js
+import { createContext, useState, useContext, useEffect } from 'react';
 
-const useGameStore = create((set) => ({
-  player: { position: { x: 0, y: 0, z: 0 }, health: 100 },
-  enemies: [],
-  bullets: [],
-  addEnemy: (enemy) => set((state) => ({ enemies: [...state.enemies, enemy] })),
-  addBullet: (bullet) => set((state) => ({ bullets: [...state.bullets, bullet] })),
-  reset: () => set({ player: { position: { x: 0, y: 0, z: 0 }, health: 100 }, enemies: [], bullets: [] })
-}));
+const GameContext = createContext();
 
-export default useGameStore;
+export const GameProvider = ({ children }) => {
+  const [player, setPlayer] = useState({
+    position: { x: 0, y: 0, z: 0 },
+    health: 100,
+    score: 0
+  });
+  const [enemies, setEnemies] = useState([]);
+  const [gameState, setGameState] = useState('idle');
+  const [isPaused, setIsPaused] = useState(false);
+
+  const shoot = () => {
+    // Implementation for shooting logic
+  };
+
+  const handleCollision = (obj1, obj2) => {
+    // Placeholder for collision handling
+    return false;
+  };
+
+  useEffect(() => {
+    // Game loop and state management
+  }, [player, enemies]);
+
+  return (
+    <GameContext.Provider value={{
+      player,
+      enemies,
+      gameState,
+      isPaused,
+      shoot,
+      handleCollision,
+      setGameState,
+      setIsPaused
+    }}>
+      {children}
+    </GameContext.Provider>
+  );
+};
+
+export const useGame = () => useContext(GameContext);
