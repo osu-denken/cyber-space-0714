@@ -7,6 +7,7 @@ Reactも用いる、シングルプレイを想定する
 - React
 
 ## ディレクトリ構成
+```
 /cyber-space
 ├── AGENTS.md (先ほど作成したルールファイル)
 ├── package.json
@@ -26,6 +27,7 @@ Reactも用いる、シングルプレイを想定する
 │   │   └── HUD.jsx              // スコア、HP、レティクルなどの2D UI (Tailwind)
 │   └── utils
 │       └── collision.js         // 3Dバウンディングボックスによる軽量な衝突判定
+```
 
 機能,実装アプローチ,パフォーマンス対策
 状態管理,Zustandによるグローバル管理,描画ループ内でReactのState（useState）を更新するとCanvas全体が再レンダリングされ、フレームレートが大幅に低下します。Zustandの非反応的（Transient）なアップデートを使い、フレーム毎の更新は3D空間内で完結させます。
