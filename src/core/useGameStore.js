@@ -1,4 +1,4 @@
-canva// filepath: src/core/useGameStore.js
+// filepath: src/core/useGameStore.js
 import { createContext, useState, useContext, useEffect } from 'react';
 
 const GameContext = createContext();
