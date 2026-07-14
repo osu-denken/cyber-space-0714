@@ -1,8 +1,8 @@
 import React from 'react';
-import { useGame } from '../core/useGameStore';
+import useGameStore from '../stores/gameStore';
 
 const Enemy = () => {
-  const enemies = useGameStore(state => state.enemies);
+  const enemies = useGameStore((state) => state.enemies) || [];
 
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
