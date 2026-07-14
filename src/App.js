@@ -1,11 +1,15 @@
 import React from 'react';
 import { GameCanvas } from './components/GameCanvas';
+import HUD from './components/HUD';
+import Enemy from './components/Enemy';
 
 function App() {
   return (
     <div className="App">
-      <GameCanvas />
-    </div>
+        <GameCanvas />
+        <Enemy />
+        <HUD />
+     </div>
   );
 }
 
