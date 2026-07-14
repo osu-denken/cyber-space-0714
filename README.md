@@ -32,3 +32,14 @@ Reactも用いる、シングルプレイを想定する
 描画ループ,@react-three/fiber の useFrame,"useFrame(state, delta) を用い、すべての移動計算を delta (経過時間) 依存にすることで、ディスプレイのHzに関わらず一定の速度で動作させます。"
 オブジェクトプール,弾（Bullets）の再利用,射撃のたびに新しいMesh（3Dモデル）を生成・破棄すると、メモリの確保・解放が頻発してカクつき（GCスパイク）の原因になります。あらかじめ固定個数（例: 最大100発）の配列を確保し、有効/無効フラグを切り替えて使い回します。
 グラフィック,ネオン/サイバー表現,MeshBasicMaterial に color と toneMapped={false} を組み合わせ、ブルーム効果（発光）を最小限の負荷で表現します。
+
+
+# images
+<img width="817" height="629" alt="image" src="https://github.com/user-attachments/assets/852000cd-3cd1-458f-94ba-0f878fe7373b" />
+
+<img width="436" height="966" alt="image" src="https://github.com/user-attachments/assets/a6e0049f-e36d-44df-81d3-ce6808d3c1b0" />
+
+<img width="738" height="416" alt="image" src="https://github.com/user-attachments/assets/ca5c0a3f-835b-48be-84aa-18a77e7b2d55" />
+
+
+
