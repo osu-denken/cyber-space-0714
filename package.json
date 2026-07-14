@@ -1,0 +1,13 @@
+{
+  "name": "cyber-space",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-three-fiber": "^8.1.0",
+    "three": "^0.132.2"
+  }
+}
